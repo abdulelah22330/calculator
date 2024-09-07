@@ -1,0 +1,66 @@
+/* The CSS box-sizingproperty allows us to include the padding and border in an element's total width and height */
+
+*,*::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    /* To make sure that our app takes up all screen */
+    padding:0;
+    margin:0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C)
+}
+
+.calc-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    /* six rows, the first rows needs to be able to grow as much as needed */
+    grid-template-rows: 
+    minmax(120px, auto) 
+    repeat(5,100px);
+
+}
+
+.calc-grid>button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px white solid;
+    background-color: rgba(255,255,255, .75);
+}
+
+.calc-grid>button:hover{
+    background-color: rgba(255,255,255, .90);
+
+}
+
+.span-two{
+    grid-column: span 2;
+}
+.calc-output{
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding:10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.calc-output .prev-op{
+    color: rgba(255,255,255,.75);
+    font-size: 1.5rem;
+}
+
+.calc-output .current-op{
+    color:white;
+    font-size: 2rem;
+}
