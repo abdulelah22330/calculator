@@ -3,49 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Abdulelah</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <title>Calculator | Abdulelah</title>
+
+
 </head>
 <body>
-    <div class="wrapper">
-        <section class="screen">
-            0
-        </section>
-        <section class="calc-buttons">
-            <div class="calc-buttons-row">
-                <button class="calc-button double">
-                    C
-                </button>
-                <button class="calc-button">&larr;</button>
-                <button class="calc-button">&divide;</button>
-            </div>
+    <!-- Calculator Body -->
+<div class="calc-grid">
 
-            <div class="calcu-buttons-row">
-                <button class="calc-button">1</button>
-                <button class="calc-button">2</button>
-                <button class="calc-button">3</button>
-                <button class="calc-button">&times;</button>
-            </div>
-            <div class="calcu-buttons-row">
-                <button class="calc-button">4</button>
-                <button class="calc-button">5</button>
-                <button class="calc-button">6</button>
-                <button class="calc-button">&minus;</button>
-            </div>
-            <div class="calcu-buttons-row">
-                <button class="calc-button">7</button>
-                <button class="calc-button">8</button>
-                <button class="calc-button">9</button>
-                <button class="calc-button">&plus;</button>
-            </div>
-            <div class="calcu-buttons-row">
-                <button class="calc-button">0</button>
-                <button class="calc-button">&equals;</button>
-            </div>
-        </section>
+    <!-- Calculator Display Screen -->
+    <div class="calc-output">
+        <div data-prev-op class="prev-op"></div>
+        <div data-current-op class="current-op"></div>
     </div>
-    <script src="script.js"></script>
+    <button data-all-clear class="span-two">AC</button>
+    <button data-delete>DEL</button>
+    <!-- data-operation is custom data attribute in HTML5 -->
+    <button data-operation>&divide;</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>&times;</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>&plus;</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>&minus;</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-two">&equals;</button>
+
+</div>
+
+
+
+<!-- Scripts -->
+<script src="script.js"></script>
 </body>
 </html>
